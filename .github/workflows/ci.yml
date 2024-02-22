@@ -20,5 +20,5 @@ jobs:
 
     - name: Run scripts
       run: |
-        npm run dev
+        npm run start
         npm run test
