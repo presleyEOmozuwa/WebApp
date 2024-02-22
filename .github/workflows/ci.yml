@@ -18,7 +18,12 @@ jobs:
       with:
         node-version: '20.x'
 
-    - name: Run scripts
+    - name: Operations
       run: |
-        npm run start
+        ls -a ${{github.workspace}}
+        touch .env
+        PORT=${{secrets.PORT}} >> .env
+        npm ci
+        npm run dev
         npm run test
+        
