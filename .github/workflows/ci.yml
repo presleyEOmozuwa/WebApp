@@ -20,12 +20,11 @@ jobs:
 
     - name: Operations
       run: |
-        ls -a ${{github.workspace}}
         touch .env
         PORT=${{secrets.PORT}} >> .env
         npm ci
     
     - name: Run test suites
       run: |
-        npm run test ${{github.workspace}}
+        npm run test
         
