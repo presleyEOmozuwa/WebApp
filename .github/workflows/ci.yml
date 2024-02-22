@@ -24,6 +24,8 @@ jobs:
         touch .env
         PORT=${{secrets.PORT}} >> .env
         npm ci
-        npm run dev
-        npm run test
+    
+    - name: Run test suites
+      run: |
+        npm run test ${{github.workspace}}
         
