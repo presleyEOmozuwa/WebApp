@@ -23,10 +23,6 @@ jobs:
         npm ci
         touch .env
         PORT=${{secrets.PORT}} >> .env
-        
-    
-    - name: Run test suites
-      run: |
+        npm run dev
         npm run test
-        kill $!
         
