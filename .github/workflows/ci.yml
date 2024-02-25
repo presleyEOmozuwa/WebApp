@@ -34,4 +34,4 @@ jobs:
         echo PORT=${{ secrets.PORT }}
 
     - name: Entrypoint
-      run: npm run start         
+      run: npm run start 
